@@ -1,4 +1,5 @@
 ---
+import UserMeta from "../components/UserMeta.astro";
 import Layout from "../layouts/Layout.astro";
 
 const lastUpdate = "2024-07-01";
@@ -8,63 +9,46 @@ const me = {
   cvLink: "https://cdn.quinones.pro/resume.pdf",
   email: "luis@quinones.pro",
 };
+
+const localContents = [
+  {
+    title: "Projects",
+    href: "#projects",
+  },
+  {
+    title: "Professional Career",
+    href: "#professional-career",
+  },
+  {
+    title: "Interests",
+    href: "#interests",
+  },
+  {
+    title: "Knowledge",
+    href: "#knowledge",
+  },
+  {
+    title: "Other places",
+    href: "#other-places",
+  },
+];
 ---
 
 <Layout title={me.fullName}>
 	<main class="flex flex-col gap-16">
-		<section id="meta">
-			<h1 class="uppercase font-extrabold" style="padding-left: 18px;">{me.fullName}</h1> 
-
-			<h4 class="font-semibold text-center">
-				Updated
-			</h4>
-
-			<span class="text-center">
-				{lastUpdate}
-			</span>
-
-			<div id="cv" class="flex flex-row items-center gap-3">
-				<h2 class="font-semibold text-start border-r-[1px] border-white border-solid pl-[1.2rem] pr-[1.2rem]">
-					CV
-				</h2>
-
-				<a href="https://cdn.quinones.pro/resume.pdf" target="_blank" class="underline text-center">
-					{me.cvLink}
-				</a>
-			</div>
-
-			<h2 class="font-semibold text-center">
-				Contact
-			</h2>
-
-			<span class="text-center">
-				{me.email}
-			</span>
-		</section>
+		<UserMeta lastUpdate={lastUpdate} me={me} />
 
 		<section id="contents" class="flex flex-col gap-4">
 			<h2 class="font-bold">CONTENTS</h2>
 
 			<ul class="list-disc list-inside ml-6">
-				<li>
-					<a href="#projects" class="underline">Projects</a>
-				</li>
-
-				<li>
-					<a href="#professional-career" class="underline">Professional Career</a>
-				</li>
-
-				<li>
-					<a href="#interests" class="underline">Interests</a>
-				</li>
-
-				<li>
-					<a href="#knowledge" class="underline">Knowledge</a>
-				</li>
-
-				<li>
-					<a href="#other-places" class="underline">Other places</a>
-				</li>
+				{
+					localContents.map(({ title, href }) => (
+						<li>
+							<a href={href} class="underline">{title}</a>
+						</li>
+					))
+				}
 		</section>
 	</main>
 
@@ -79,18 +63,5 @@ const me = {
 		color: white;
 		font-size: 18px;
 		line-height: 2;
-	}
-
-	#meta {
-		display: grid;
-		grid-template-columns: 60% 12% 28%;
-		align-items: center;
-		margin-top: 1.5rem;
-	}
-
-	#meta > * {
-		border: 1px solid white;
-		box-sizing: border-box;
-		padding: 4px;
 	}
 </style>
