@@ -11,7 +11,7 @@ const me = {
 ---
 
 <Layout title={me.fullName}>
-	<main>
+	<main class="flex flex-col gap-16">
 		<section id="meta">
 			<h1 class="uppercase font-extrabold" style="padding-left: 18px;">{me.fullName}</h1> 
 
@@ -40,6 +40,31 @@ const me = {
 			<span class="text-center">
 				{me.email}
 			</span>
+		</section>
+
+		<section id="contents" class="flex flex-col gap-4">
+			<h2 class="font-bold">CONTENTS</h2>
+
+			<ul class="list-disc list-inside ml-6">
+				<li>
+					<a href="#projects" class="underline">Projects</a>
+				</li>
+
+				<li>
+					<a href="#professional-career" class="underline">Professional Career</a>
+				</li>
+
+				<li>
+					<a href="#interests" class="underline">Interests</a>
+				</li>
+
+				<li>
+					<a href="#knowledge" class="underline">Knowledge</a>
+				</li>
+
+				<li>
+					<a href="#other-places" class="underline">Other places</a>
+				</li>
 		</section>
 	</main>
 
