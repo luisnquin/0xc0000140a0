@@ -12,13 +12,13 @@ const { lastUpdate, me } = Astro.props;
 ---
 
 <section id="meta">
-    <h1 class="uppercase font-extrabold" style="padding-left: 18px;">{me.fullName}</h1> 
+    <h1 id="fullname" class="uppercase font-extrabold" style="padding-left: 18px;">{me.fullName}</h1> 
 
-    <h4 class="font-semibold text-center">
+    <h4 id="last-update" class="font-semibold text-center">
         Updated
     </h4>
 
-    <span class="text-center">
+    <span id="last-update-value" class="text-center">
         {lastUpdate}
     </span>
 
@@ -32,11 +32,11 @@ const { lastUpdate, me } = Astro.props;
         </a>
     </div>
 
-    <h2 class="font-semibold text-center">
+    <h2 id="contact" class="font-semibold text-center">
         Contact
     </h2>
 
-    <span class="text-center">
+    <span id="contact-value" class="text-center">
         {me.email}
     </span>
 </section>
@@ -74,6 +74,30 @@ const { lastUpdate, me } = Astro.props;
     @media (max-width: 1100px) {
         #meta {
             grid-template-columns: 100%;
+        }
+
+        #fullname {
+            order: 1;
+        }
+
+        #cv {
+            order: 2;
+        }
+
+        #contact {
+            order: 3;
+        }
+
+        #contact-value {
+            order: 4;
+        }
+
+        #last-update {
+            order: 5;
+        }
+        
+        #last-update-value {
+            order: 6;
         }
     }
 </style>
