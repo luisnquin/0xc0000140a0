@@ -1,16 +1,8 @@
-interface DetailedTechnology {
-  name: string;
-  link: string;
-}
-
 export class Description {
   public achievements: string[];
-  public technologies: DetailedTechnology[];
+  public technologies: string[];
 
-  constructor(inputs: {
-    technologies?: DetailedTechnology[];
-    achievements?: string[];
-  }) {
+  constructor(inputs: { achievements?: string[]; technologies?: string[] }) {
     this.technologies = inputs.technologies || [];
     this.achievements = inputs.achievements || [];
   }
