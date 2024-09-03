@@ -1,6 +1,6 @@
 ---
 import ProfessionalCareer from "../components/ProfessionalCareer.astro";
-import type { IProfessionalExperience } from "@/types";
+import { Description, type IProfessionalExperience } from "../types";
 import UserMeta from "../components/UserMeta.astro";
 import Layout from "../layouts/Layout.astro";
 
@@ -45,6 +45,32 @@ const professionalCareer: Array<IProfessionalExperience> = [
     until: "NaN",
     description:
       "Is a crowdfunding fintech company situated in Peru, dedicated to connecting investors with enterprises in need of funding. Our aspiration is to enhance the Peruvian economy and boost small and medium-sized enterprises around the country.",
+  },
+  {
+    company: "WiserSKILLS",
+    position: "Full-Stack Developer",
+    location: "Paris, France",
+    mode: "Remote",
+    since: "Jun 2023",
+    until: "Dec 2023",
+    description:
+      "Is a software development company that specializes in the development of web applications and mobile applications. Our team focuses on building high-quality, scalable, and secure software solutions that meet the needs of our clients.",
+  },
+  {
+    company: "WiserSKILLS",
+    position: "Backend Developer",
+    location: "Paris, France",
+    mode: "Remote",
+    since: "Feb 2022",
+    until: "Jun 2023",
+    description: new Description({
+      achievements: [
+        "Improved the development experience making that the productivity increases by 92.5% in all the cases.",
+        "Configuration, deploying and monitoring tasks of more than 20 deployed servers using ArgoCD, kubernetes and k9s.",
+        "I dealt with multiple cases of race condition issues that have been in the backend before my entry.",
+        "Automation of some common processes for the backend and the DevOps team.",
+      ],
+    }),
   },
   {
     company: "Desstorm",

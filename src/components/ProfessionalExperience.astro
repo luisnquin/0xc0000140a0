@@ -1,5 +1,5 @@
 ---
-import type { IProfessionalExperience } from "@/types";
+import { type IProfessionalExperience, Description } from "../types";
 
 interface Props {
   experience: IProfessionalExperience;
@@ -14,7 +14,22 @@ const { company, position, since, until, mode, description } = experience;
         {company} - {position} - ({since} - {until})
     </summary>
 
-    <p>{description}</p>
+    {
+        (description instanceof Description) ? (
+            <div class="mb-3">
+                {description.achievements.length > 0 && <div class="flex flex-col gap-2 ml-2">
+                    <h4 class="font-bold">Achievements</h4>
+                    <ul>
+                        {description.achievements.map((item) => (
+                            <li class="list-disc list-inside">{item}</li>
+                        ))}
+                    </ul>
+                </div>}
+            </div>
+        ) : (
+            <p class="mb-3">{description}</p>
+        )
+    }
 </details>
 
 <style>
