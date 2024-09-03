@@ -1,0 +1,32 @@
+---
+import ProfessionalExperience from "./ProfessionalExperience.astro";
+import type { IProfessionalExperience } from "@/types";
+
+interface Props {
+  professionalCareer: IProfessionalExperience[];
+}
+
+const { professionalCareer } = Astro.props;
+---
+
+<section id="professional-career">
+    <h2 class="font-bold">PROFESSIONAL CAREER</h2>
+
+    <ul>
+        {
+            professionalCareer.map((experience) => (
+                <li>
+                    <ProfessionalExperience {experience} />
+                </li>
+            ))
+        }
+    </ul>
+</section>
+
+<style>
+    #professional-career {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+</style>

@@ -1,0 +1,25 @@
+---
+import type { IProfessionalExperience } from "@/types";
+
+interface Props {
+  experience: IProfessionalExperience;
+}
+
+const { experience } = Astro.props;
+const { company, position, since, until, mode, description } = experience;
+---
+
+<details>
+    <summary>
+        {company} - {position} - ({since} - {until})
+    </summary>
+
+    <p>{description}</p>
+</details>
+
+<style>
+    details {
+        border: 1px solid white;
+        padding: 0.5rem 0.8rem;
+    }
+</style>

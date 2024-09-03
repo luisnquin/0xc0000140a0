@@ -1,4 +1,6 @@
 ---
+import ProfessionalCareer from "../components/ProfessionalCareer.astro";
+import type { IProfessionalExperience } from "@/types";
 import UserMeta from "../components/UserMeta.astro";
 import Layout from "../layouts/Layout.astro";
 
@@ -32,11 +34,33 @@ const localContents = [
     href: "#other-places",
   },
 ];
+
+const professionalCareer: Array<IProfessionalExperience> = [
+  {
+    company: "Inversiones.io",
+    position: "Site Reliability Engineer",
+    location: "Perú",
+    mode: "Hybrid",
+    since: "Jan 2024",
+    until: "NaN",
+    description:
+      "Is a crowdfunding fintech company situated in Peru, dedicated to connecting investors with enterprises in need of funding. Our aspiration is to enhance the Peruvian economy and boost small and medium-sized enterprises around the country.",
+  },
+  {
+    company: "Desstorm",
+    position: "Web Developer",
+    location: "Perú",
+    mode: "Remote",
+    since: "Oct 2021",
+    until: "Dec 2021",
+    description: "",
+  },
+];
 ---
 
 <Layout title={me.fullName}>
 	<main class="flex flex-col gap-16">
-		<UserMeta lastUpdate={lastUpdate} me={me} />
+		<UserMeta {lastUpdate} {me} />
 
 		<section id="contents" class="flex flex-col gap-4">
 			<h2 class="font-bold">CONTENTS</h2>
@@ -50,6 +74,8 @@ const localContents = [
 					))
 				}
 		</section>
+
+    <ProfessionalCareer {professionalCareer} />
 	</main>
 
 </Layout>
