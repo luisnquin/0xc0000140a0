@@ -27,7 +27,7 @@ const { company, position, since, until, mode, description } = experience;
                 </div>}
             </div>
         ) : (
-            <p class="mb-3">{description}</p>
+            description && <p class="mb-3">{description}</p>
         )
     }
 </details>
