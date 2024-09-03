@@ -1,8 +1,10 @@
 export class Description {
   public achievements: string[];
+  public technologies: string[];
 
-  constructor(inputs: { achievements: string[] }) {
-    this.achievements = inputs.achievements;
+  constructor(inputs: { achievements?: string[]; technologies?: string[] }) {
+    this.technologies = inputs.technologies || [];
+    this.achievements = inputs.achievements || [];
   }
 }
 
