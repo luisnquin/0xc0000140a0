@@ -30,7 +30,9 @@ const { company, position, since, until, mode, description } = experience;
                     <h4 class="font-bold">Technologies</h4>
                     <ul class="flex flex-row gap-3">
                         {description.technologies.map((item) => (
-                            <li class="text-[15px] underline">{item}</li>
+                            <li class="text-[15px] underline">
+                                <a href={item.link} target="_blank" class="underline">{item.name}</a>
+                            </li>
                         ))}
                     </ul>
                 </div>}
