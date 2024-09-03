@@ -15,5 +15,5 @@ export interface IProfessionalExperience {
   mode: string;
   since: string;
   until: string;
-  description: string | Description;
+  description?: string | Description;
 }
