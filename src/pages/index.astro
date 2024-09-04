@@ -1,8 +1,10 @@
 ---
 import ProfessionalCareer from "@/components/professional-career.astro";
+import Technologies from "@/components/technologies.astro";
 import UserMeta from "@/components/user-meta.astro";
 import Projects from "@/components/projects.astro";
 import Layout from "@/layouts/Layout.astro";
+
 import { me } from "@/data";
 
 const lastUpdate = "2024-07-01";
@@ -51,6 +53,8 @@ const localContents = [
     <Projects />
 
     <ProfessionalCareer />
+
+    <Technologies />
 	</main>
 
 </Layout>

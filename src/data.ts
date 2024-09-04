@@ -1,5 +1,6 @@
 import {
   type IProfessionalExperience,
+  type IKnowledgeCategory,
   type IProject,
   HiddenProject,
   Description,
@@ -105,5 +106,113 @@ export const professionalCareer: Array<IProfessionalExperience> = [
     mode: "Remote",
     since: "Oct 2021",
     until: "Dec 2021",
+  },
+];
+
+export const knowledgeCategories: Array<IKnowledgeCategory> = [
+  {
+    name: "Programming Languages",
+    items: [
+      {
+        name: "Go",
+        slug: "go",
+      },
+      {
+        name: "TypeScript",
+        slug: "typescript",
+      },
+      {
+        name: "Python",
+        slug: "python",
+      },
+      {
+        name: "Rust",
+        slug: "rust",
+      },
+      {
+        name: "OCaml",
+        slug: "ocaml",
+      },
+    ],
+  },
+  {
+    name: "DevOps Tools",
+    items: [
+      {
+        name: "Terraform",
+        slug: "terraform",
+      },
+      {
+        name: "Docker",
+        slug: "docker",
+      },
+      {
+        name: "Kubernetes",
+        slug: "kubernetes",
+      },
+      {
+        name: "ArgoCD",
+        slug: "argocd",
+      },
+    ],
+  },
+  {
+    name: "Frontend",
+    items: [
+      {
+        name: "React.js",
+        slug: "react",
+      },
+      {
+        name: "React Native",
+        slug: "react-native",
+      },
+      {
+        name: "Next.js",
+        slug: "next",
+      },
+      {
+        name: "Vue.js",
+        slug: "vue",
+      },
+      {
+        name: "HTMX",
+        slug: "htmx",
+      },
+    ],
+  },
+  {
+    name: "Backend",
+    items: [
+      {
+        name: "Lackstack Echo",
+        slug: "lackstack-echo",
+      },
+      {
+        name: "Encore.dev",
+        slug: "encore",
+      },
+      {
+        name: "NestJS",
+        slug: "nestjs",
+      },
+      {
+        name: "FastAPI",
+        slug: "fastapi",
+      },
+    ],
+  },
+  {
+    name: "Cloud Providers",
+    items: [
+      {
+        name: "AWS",
+        slug: "aws",
+      },
+      {
+        name: "GCP",
+        slug: "gcp",
+      },
+    ],
   },
 ];
