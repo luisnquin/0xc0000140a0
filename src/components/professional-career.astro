@@ -1,12 +1,6 @@
 ---
 import ProfessionalExperience from "./professional-experience.astro";
-import type { IProfessionalExperience } from "../types";
-
-interface Props {
-  professionalCareer: IProfessionalExperience[];
-}
-
-const { professionalCareer } = Astro.props;
+import { professionalCareer } from "@/data";
 ---
 
 <section id="professional-career">

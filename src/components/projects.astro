@@ -1,12 +1,6 @@
 ---
-import { HiddenProject, type IProject } from "../types";
 import ProjectCard from "./project-card.astro";
-
-interface Props {
-  projects: Array<IProject | HiddenProject>;
-}
-
-const { projects } = Astro.props;
+import { projects } from "@/data";
 ---
 
 <section id="projects" class="flex flex-col gap-4">
