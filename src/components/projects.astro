@@ -1,0 +1,24 @@
+---
+import { HiddenProject, type IProject } from "../types";
+import ProjectCard from "./project-card.astro";
+
+interface Props {
+  projects: Array<IProject | HiddenProject>;
+}
+
+const { projects } = Astro.props;
+---
+
+<section id="projects" class="flex flex-col gap-4">
+    <h2 class="font-bold">PROJECTS</h2>
+
+    <ul class="rounded-s-none">
+        {
+            projects.map((project) => (
+                <li>
+                    <ProjectCard {project} />
+                </li>
+            ))
+        }
+    </ul>
+</section>

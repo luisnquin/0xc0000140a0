@@ -1,0 +1,39 @@
+---
+import ExternalLink from "./svg/external-link.astro";
+import { type IProject, HiddenProject } from "../types";
+
+interface Props {
+  project: IProject | HiddenProject;
+}
+
+const { project } = Astro.props;
+---
+
+{
+    (!(project instanceof HiddenProject)) ? (
+        <div class="flex flex-col gap-2 p-4 border border-white">
+            <a href={project.link} target="_blank">
+                <div class="flex flex-row gap-1 items-center">
+                    <h3 class="font-bold underline">{project.title}</h3>
+                    <ExternalLink fill="white" width={20} height={20} />
+                </div>
+            </a>
+
+
+            <p>{project.description}</p>
+        </div>
+    ) : (
+        <div class="flex flex-col gap-2 p-4 border border-white">
+            <span class="text-center">--- SOON ---</span>
+        </div>
+    )
+}
+
+
+
+<style>
+    a {
+        display: block;
+        text-decoration: none;
+    }
+</style>
