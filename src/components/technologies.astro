@@ -10,7 +10,7 @@ import { knowledgeCategories } from "@/data";
             knowledgeCategories.map(({ name, items }) => (
                 <li>
                     <h3 class="font-bold">{name}</h3>
-                    <ul class="flex flex-row gap-3">
+                    <ul class="flex flex-row gap-3 flex-wrap">
                         {
                             items.map(({ name, slug }) => (
                                 <li>
