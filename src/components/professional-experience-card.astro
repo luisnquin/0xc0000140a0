@@ -10,8 +10,8 @@ const { company, position, since, until, mode, description } = experience;
 ---
 
 <details>
-    <summary class="relative">
-        <span class="left">{company} - {position}</span> <span class="absolute right-0">({since} - {until})</span>
+    <summary class="flex items-center justify-between">
+        <span><span class="company">{company}</span> - {position}</span> <span>({since} - {until})</span>
     </summary>
 
     {
@@ -45,5 +45,23 @@ const { company, position, since, until, mode, description } = experience;
     details {
         border: 1px solid white;
         padding: 0.5rem 0.8rem;
+    }
+
+    .company::before { /* I turned a problem into an improvement. :] */
+        content: "+";
+        margin-left: 0.25rem;
+        margin-right: 0.5rem;
+        white-space: nowrap;
+    }
+
+    details[open] .company::before {
+        content: "-";
+    }
+
+    @media (max-width: 1250px) {
+        summary {
+            flex-direction: column;
+            align-items: flex-start
+        }
     }
 </style>
