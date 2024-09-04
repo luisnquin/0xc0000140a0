@@ -1,5 +1,5 @@
 ---
-import ProfessionalExperience from "./professional-experience.astro";
+import ProfessionalExperienceCard from "./professional-experience-card.astro";
 import { professionalCareer } from "@/data";
 ---
 
@@ -10,7 +10,7 @@ import { professionalCareer } from "@/data";
         {
             professionalCareer.map((experience) => (
                 <li>
-                    <ProfessionalExperience {experience} />
+                    <ProfessionalExperienceCard {experience} />
                 </li>
             ))
         }
