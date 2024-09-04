@@ -34,7 +34,7 @@ const localContents = [
 ---
 
 <Layout title={me.fullName}>
-	<main class="flex flex-col gap-16">
+	<main class="flex flex-col gap-16 relative">
 		<UserMeta {lastUpdate} {me} />
 
 		<section id="contents" class="flex flex-col gap-4">
@@ -49,6 +49,8 @@ const localContents = [
 					))
 				}
 		</section>
+
+    <span class="absolute text-[12px]">This is a WIP!</span>
 
     <Projects />
 
