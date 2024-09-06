@@ -8,7 +8,7 @@ import {
 
 export const me = {
   fullName: "Luis Quiñones Requelme",
-  cvLink: "https://cdn.quinones.pro/resume.pdf",
+  cvLink: "https://cdn.luisquinones.me/resume.pdf", // https://cdn.quinones.pro/resume.pdf
   email: "luis@quinones.pro",
 };
 
