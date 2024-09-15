@@ -66,6 +66,18 @@ export const professionalCareer: Array<IProfessionalExperience> = [
     mode: "Remote",
     since: "May 2024",
     until: "NaN",
+    description: new Description({
+      about:
+        "In charge of the development of mobile and backend applications. Our architecture is based on microservices, using the BIAN framework with Open Banking technologies and following the ISO 20022 specificiation. We're using the ORCA specification from PortX as a high-level abstraction to simplify the adoption process.",
+      technologies: [
+        "clerk-auth",
+        "encore.dev",
+        "react-native",
+        "typescript",
+        "nestjs",
+        "tailwindcss",
+      ],
+    }),
   },
   {
     company: "Netic Labs",
