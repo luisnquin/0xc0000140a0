@@ -37,6 +37,27 @@ export const professionalCareer: Array<IProfessionalExperience> = [
     mode: "Remote",
     since: "Jul 2024",
     until: "NaN",
+    description: new Description({
+      about:
+        "I'm leading the development of the company's business, backend, mobile application, and infrastructure, with focus on real-time fund collection. These products evolves how customers manage their finances \"in the crowd\".",
+      achievements: [
+        "Fault-tolerant and resilient architecture for the multiple backend services.",
+        "I checked that my shell's $PATH doesn't have anything out of the ordinary. ;)",
+      ],
+      technologies: [
+        "go",
+        "astro",
+        "valkey",
+        "postgres",
+        "nats",
+        "aws",
+        "figma",
+        "react-native",
+        "typescript",
+        "terraform",
+        "astro",
+      ],
+    }),
   },
   {
     company: "Qompa",
