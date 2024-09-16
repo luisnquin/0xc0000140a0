@@ -155,6 +155,10 @@ export const knowledgeCategories: Array<IKnowledgeCategory> = [
         slug: "typescript",
       },
       {
+        name: "Zig",
+        slug: "zig",
+      },
+      {
         name: "Python",
         slug: "python",
       },
