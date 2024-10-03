@@ -163,8 +163,16 @@ export const knowledgeCategories: Array<IKnowledgeCategory> = [
         slug: "python",
       },
       {
+        name: "Nix",
+        slug: "nix",
+      },
+      {
         name: "Rust",
         slug: "rust",
+      },
+      {
+        name: "sh",
+        slug: "shell",
       },
       {
         name: "OCaml",
@@ -178,6 +186,10 @@ export const knowledgeCategories: Array<IKnowledgeCategory> = [
       {
         name: "Terraform",
         slug: "terraform",
+      },
+      {
+        name: "NixOS",
+        slug: "nixos",
       },
       {
         name: "Docker",
@@ -243,11 +255,11 @@ export const knowledgeCategories: Array<IKnowledgeCategory> = [
     name: "Cloud Providers",
     items: [
       {
-        name: "AWS",
+        name: "Amazon Web Services",
         slug: "aws",
       },
       {
-        name: "GCP",
+        name: "Google Cloud Platform",
         slug: "gcp",
       },
     ],
