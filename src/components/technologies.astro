@@ -1,5 +1,13 @@
 ---
 import { knowledgeCategories } from "@/data";
+
+const COLORS: Record<string, string> = {
+  pink: "text-[#f886fc]",
+  cian: "text-[#62dff0]",
+  blue: "text-[#00c6ff]",
+  green: "text-[#00ff00]",
+  yellow: "text-[#ffff00]",
+};
 ---
 
 <section id="knowledge" class="flex flex-col gap-3">
@@ -7,9 +15,9 @@ import { knowledgeCategories } from "@/data";
 
     <ul class="flex flex-col gap-3">
         {
-            knowledgeCategories.map(({ name, items }) => (
+            knowledgeCategories.map(({ name, color, items }) => (
                 <li>
-                    <h3 class="font-bold">{name}</h3>
+                    <h3 class={`font-bold ${COLORS[color]}`}>{name}</h3>
                     <ul class="flex flex-row gap-3 flex-wrap">
                         {
                             items.map(({ name, slug }) => (

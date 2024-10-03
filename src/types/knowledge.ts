@@ -5,5 +5,6 @@ interface IKnowledge {
 
 export interface IKnowledgeCategory {
   name: string;
+  color: string;
   items: IKnowledge[];
 }

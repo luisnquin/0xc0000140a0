@@ -145,6 +145,7 @@ export const professionalCareer: Array<IProfessionalExperience> = [
 export const knowledgeCategories: Array<IKnowledgeCategory> = [
   {
     name: "Programming Languages",
+    color: "pink",
     items: [
       {
         name: "Go",
@@ -182,6 +183,7 @@ export const knowledgeCategories: Array<IKnowledgeCategory> = [
   },
   {
     name: "DevOps Tools",
+    color: "cian",
     items: [
       {
         name: "Terraform",
@@ -207,6 +209,7 @@ export const knowledgeCategories: Array<IKnowledgeCategory> = [
   },
   {
     name: "Frontend",
+    color: "blue",
     items: [
       {
         name: "React.js",
@@ -232,6 +235,7 @@ export const knowledgeCategories: Array<IKnowledgeCategory> = [
   },
   {
     name: "Backend",
+    color: "green",
     items: [
       {
         name: "Lackstack Echo",
@@ -253,6 +257,7 @@ export const knowledgeCategories: Array<IKnowledgeCategory> = [
   },
   {
     name: "Cloud Providers",
+    color: "yellow",
     items: [
       {
         name: "Amazon Web Services",
