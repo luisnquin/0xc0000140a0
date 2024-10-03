@@ -3,7 +3,6 @@ interface Props {
   class?: string;
   width: number;
   height: number;
-  fill: string;
 }
 
 const { props } = Astro;
@@ -12,10 +11,11 @@ const { props } = Astro;
 <svg
 xmlns="http://www.w3.org/2000/svg"
 viewBox="0 0 24 24"
+fill="none"
 {...props}
 >
 <path
-    stroke="#000"
+    stroke="#fff"
     stroke-linecap="round"
     stroke-linejoin="round"
     stroke-width={2}
