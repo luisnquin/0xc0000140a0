@@ -1,6 +1,7 @@
 import {
   type IProfessionalExperience,
   type IKnowledgeCategory,
+  type IInterest,
   type IProject,
   HiddenProject,
   Description,
@@ -27,6 +28,24 @@ export const projects: Array<IProject | HiddenProject> = [
   },
   new HiddenProject(),
   new HiddenProject(),
+];
+
+export const interests: Array<IInterest> = [
+  {
+    name: "Fencing",
+    link: "https://en.wikipedia.org/wiki/Fencing",
+    description: "",
+  },
+  {
+    name: "Deterministic and reproducible systems",
+    link: "https://en.wikipedia.org/wiki/Deterministic_system",
+    description: "",
+  },
+  {
+    name: "Terminals",
+    link: "https://en.wikipedia.org/wiki/Terminal_emulator",
+    description: "Given my background you might find this redundant. ;)",
+  },
 ];
 
 export const professionalCareer: Array<IProfessionalExperience> = [
