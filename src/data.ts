@@ -79,14 +79,14 @@ export const professionalCareer: Array<IProfessionalExperience> = [
       ],
     }),
   },
-  {
-    company: "Netic Labs",
-    position: "Founder & CEO",
-    location: "Peru",
-    mode: "Remote",
-    since: "Mar 2024",
-    until: "NaN",
-  },
+  // {
+  //   company: "Netic Labs",
+  //   position: "Founder & CEO",
+  //   location: "Peru",
+  //   mode: "Remote",
+  //   since: "Mar 2024",
+  //   until: "NaN",
+  // },
   {
     company: "Inversiones.io",
     position: "Site Reliability Engineer",
