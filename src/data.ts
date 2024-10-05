@@ -11,6 +11,14 @@ export const me = {
   fullName: "Luis Quiñones Requelme",
   cvLink: "https://cdn.luisquinones.me/resume.pdf", // https://cdn.quinones.pro/resume.pdf
   email: "luis@quinones.pro",
+  background: [
+    "Entrepreneurship",
+    "Programming",
+    "Fintech",
+    "FPV",
+    "Engineering",
+    "Drawing",
+  ],
 };
 
 export const projects: Array<IProject | HiddenProject> = [

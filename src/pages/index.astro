@@ -35,7 +35,19 @@ const localContents = [
 
 <Layout title={me.fullName}>
 	<main class="flex flex-col gap-16 relative">
-		<UserMeta {lastUpdate} {me} />
+    <div class="flex flex-col gap-5">
+      <UserMeta {lastUpdate} {me} />
+
+      <lu class="flex flex-wrap flex-row gap-3">
+        {
+          me.background.map((item) => (
+            <li class="list-none">
+              <span>~{item}</span>
+            </li>
+          ))
+        }
+      </lu>
+    </div>
 
 		<section id="contents" class="flex flex-col gap-4">
 			<h2 class="font-bold uppercase">Contents</h2>
